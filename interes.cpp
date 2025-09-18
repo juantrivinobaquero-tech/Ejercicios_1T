@@ -35,6 +35,4 @@ int main(){
 
     return 0;
 
-    //monto_final = pow(principal * (1 + (tasa / aplica_anual)) , aplica_anual * años );
-
 }

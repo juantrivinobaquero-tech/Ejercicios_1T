@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-    int numeros[5] = {0,0,0,0,0};
+    int numeros[5];
     int suma = 0;
 
     for (int i=0; i<5; i =i + 1){
@@ -17,5 +17,5 @@ int main(){
 
     cout << "La suma de los numeros recogidos es: " << suma << "\n";
     return 0;
-    
+
     }

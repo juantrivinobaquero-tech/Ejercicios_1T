@@ -58,11 +58,6 @@ void leerPuntos(Point puntos[], int n)
         puntos[1].x = 3;
         puntos[1].y = 4; 
         
-        /*puntos[2].x = 6;
-        puntos[2].y = 8;
-
-        puntos[3].x = 12;
-        puntos[3].y = 9;*/
     }
     else{
         cout << "Respuesta no válida. Usando puntos predeterminados...\n";
@@ -72,12 +67,6 @@ void leerPuntos(Point puntos[], int n)
         
         puntos[1].x = 3;
         puntos[1].y = 4; 
-        
-        /*puntos[2].x = 6;
-        puntos[2].y = 8;
-
-        puntos[3].x = 12;
-        puntos[3].y = 9;*/
 
     }
 }

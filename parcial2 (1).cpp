@@ -1,7 +1,10 @@
+//Juan Triviño y Santiago Chacón
+
 #include <iostream>
 #include <cmath>
 
 using namespace std;
+
 // Definir la estructura de un punto en 2D
 struct Point
 {
@@ -28,7 +31,7 @@ double calcularMagnitud(Point p1)
 void leerPuntos(Point puntos[], int n)
 {
     char respuesta;
-    cout << "¿Desea ingresar los puntos manualmente? (Y/N): ";
+    cout << "¿Desea ingresar los puntos manualmente? (Y/N): \n";
 
     cin >> respuesta;
     // Leer la respuesta del usuario
@@ -37,20 +40,45 @@ void leerPuntos(Point puntos[], int n)
     if (respuesta == 'Y' || respuesta == 'y')
     {
         // Completar: Leer las coordenadas de cada punto
-        for (int i; i < n; i = i + 1)
+        for (int i = 0; i < n; i = i + 1)
         {
-            cout << "Ingrese las coordenadas del punto " << i + 1 << " (x, y): ";
-            cin >> puntos[i].x >> puntos[i].y;
+            cout << "Ingrese las coordenadas del punto " << i + 1 << " (x, y): \n";
+            cin >> puntos[i].x;
+            cin >> puntos[i].y;
         }
     }
-    else
+    else if(respuesta == 'N' || respuesta == 'n')
     {
         // Usar puntos predeterminados
-        std::cout << "Usando puntos predeterminados...\n";
-        puntos[0] = {0, 0};  // Punto 1 (0, 0)
-        puntos[1] = {3, 4};  // Punto 2 (3, 4)
-        puntos[2] = {6, 8};  // Punto 3 (6, 8)
-        puntos[3] = {9, 12}; // Punto 4 (9, 12)
+        cout << "Usando puntos predeterminados...\n";
+
+        puntos[0].x = 0;
+        puntos[0].y = 0;
+        
+        puntos[1].x = 3;
+        puntos[1].y = 4; 
+        
+        /*puntos[2].x = 6;
+        puntos[2].y = 8;
+
+        puntos[3].x = 12;
+        puntos[3].y = 9;*/
+    }
+    else{
+        cout << "Respuesta no válida. Usando puntos predeterminados...\n";
+
+        puntos[0].x = 0;
+        puntos[0].y = 0;
+        
+        puntos[1].x = 3;
+        puntos[1].y = 4; 
+        
+        /*puntos[2].x = 6;
+        puntos[2].y = 8;
+
+        puntos[3].x = 12;
+        puntos[3].y = 9;*/
+
     }
 }
 
@@ -83,9 +111,11 @@ int main()
 
     float mayor;
 
-    cout << "Ingrese el número de puntos (mínimo 2): ";
+    cout << "Ingrese el número de puntos (mínimo 2)(un entero): ";
     // Leer el número de puntos
     cin >> n;
+
+    if (n )
 
     if (n < 2)
     {
@@ -108,3 +138,4 @@ int main()
 
     return 0;
 }
+//Juan Triviño y Santiago Chacón

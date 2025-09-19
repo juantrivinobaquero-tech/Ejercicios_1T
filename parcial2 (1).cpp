@@ -9,6 +9,7 @@ using namespace std;
 struct Point
 {
     double x, y;
+
 };
 
 // Función para calcular magnitud asociada al vector de un punto p1

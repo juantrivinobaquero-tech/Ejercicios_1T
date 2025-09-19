@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 
+using namespace std;
 // Definir la estructura de un punto en 2D
 struct Point
 {
@@ -21,7 +22,7 @@ double calcularMagnitud(Point p1)
 void leerPuntos(Point puntos[], int n)
 {
     char respuesta;
-    std::cout << "¿Desea ingresar los puntos manualmente? (s/n): ";
+    cout << "¿Desea ingresar los puntos manualmente? (s/n): ";
     // Leer la respuesta del usuario
 
     // Completar: Verificar si la respuesta es 's' o 'n', tener en cuenta mayúsculas y minúsculas
@@ -30,8 +31,8 @@ void leerPuntos(Point puntos[], int n)
         // Completar: Leer las coordenadas de cada punto
         for ()
         {
-            std::cout << "Ingrese las coordenadas del punto " << i + 1 << " (x, y): ";
-            std::cin >> puntos[].>> puntos;
+            cout << "Ingrese las coordenadas del punto " << i + 1 << " (x, y): ";
+            cin >> puntos[].>> puntos;
         }
     }
     else
@@ -55,17 +56,17 @@ double calcularMayorMagnitud(Point puntos[], int n, int &indiceMayorMagnitud)
 // Función para mostrar el punto con mayor magnitud y sus coordenadas
 void mostrarResultado(Point puntos[], int indiceMayorMagnitud, double magnitud)
 {
-    std::cout << "El punto más cercano es: (" << puntos[indiceMayorMagnitud].x << ", " << puntos[indiceMayorMagnitud].y << ")\n";
-    std::cout << "La dmayor magnitud de los puntos del arreglo es: " << mayorMagnitud << std::endl;
+    cout << "El punto más cercano es: (" << puntos[indiceMayorMagnitud].x << ", " << puntos[indiceMayorMagnitud].y << ")\n";
+    cout << "La dmayor magnitud de los puntos del arreglo es: " << mayorMagnitud << std::endl;
 }
 
 int main()
 {
     <tipo> n;
 
-    std::cout << "Ingrese el número de puntos (mínimo 2): ";
+    cout << "Ingrese el número de puntos (mínimo 2): ";
     // Leer el número de puntos
-    std::<funcion> >> n;
+    <funcion> >> n;
 
     if ()
     {

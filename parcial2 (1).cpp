@@ -47,17 +47,27 @@ void leerPuntos(Point puntos[], int n)
 }
 
 // Función para calcular la mayor magnitud
-double calcularMayorMagnitud(Point puntos[], int n, int &indiceMayorMagnitud)
-{
+double calcularMayorMagnitud(const Point puntos[], int n, int &indiceMayorMagnitud) {
+    // Inicializar con el primer punto
+    double mayorMagnitud = calcularMagnitud(puntos[0]);
+    indiceMayorMagnitud = 0;
 
+    // Recorrer el resto de los puntos
+    for (int i = 1; i < n; ++i) {
+        double magnitudActual = calcularMagnitud(puntos[i]);
+        if (magnitudActual > mayorMagnitud) {
+            mayorMagnitud = magnitudActual;
+            indiceMayorMagnitud = i;
+        }
+    }
     return mayorMagnitud;
 }
 
 // Función para mostrar el punto con mayor magnitud y sus coordenadas
-void mostrarResultado(Point puntos[], int indiceMayorMagnitud, double magnitud)
+void mostrarResultado(const Point puntos[], int indiceMayorMagnitud, double magnitud)
 {
-    cout << "El punto más cercano es: (" << puntos[indiceMayorMagnitud].x << ", " << puntos[indiceMayorMagnitud].y << ")\n";
-    cout << "La dmayor magnitud de los puntos del arreglo es: " << mayorMagnitud << std::endl;
+    std::cout << "El punto con mayor magnitud es: (" << puntos[indiceMayorMagnitud].x << ", " << puntos[indiceMayorMagnitud].y << ")\n";
+    std::cout << "La mayor magnitud de los puntos del arreglo es: "  << magnitud << std::endl;
 }
 
 int main()
